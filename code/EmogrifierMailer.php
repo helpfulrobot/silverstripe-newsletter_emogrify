@@ -6,7 +6,7 @@ class EmogrifierMailer extends Mailer {
 	public static function set_css_file($s){ self::$css_file = $s;}
 
 	function sendHTML($to, $from, $subject, $htmlContent, $attachedFiles = false, $customheaders = false, $plainContent = false, $inlineImages = false) {
-		if(strpos('/Security/changepassword')) {
+		if(strpos($htmlContent, '/Security/changepassword')) {
 			//do nothing, because it crashes
 		}
 		else {
